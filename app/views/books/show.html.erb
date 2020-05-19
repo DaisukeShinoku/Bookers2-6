@@ -26,8 +26,8 @@
 					<!-- いいね 非同期通信-->
 					<%= render 'books/favorite', book: @book %>
 					<!-- いいね 非同期通信-->
-					<td>
-						<%= "コメント数: #{@book.book_comments.count}" %>
+					<td id="book_count">
+						<%= render 'book_comments/count', book: @book %>
 					</td>
 					<% if @book.user == current_user %>
 					<td><%= link_to "Edit",edit_book_path(@book), class: "btn-sm btn-success edit_book_#{@book.id}" %></td>
